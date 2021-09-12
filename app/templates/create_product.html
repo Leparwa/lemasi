@@ -1,0 +1,11 @@
+{% extends 'admin.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block admincontent %}
+
+<form method="POST" enctype="multipart/form-data">
+    {{ productform.csrf_token }}
+    {{ wtf.quick_form(productform) }}
+</form>
+
+  {% endblock %}
